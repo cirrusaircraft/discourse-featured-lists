@@ -7,6 +7,21 @@
   &__list-container {
     flex: 1 1 100%;
   }
+  &__list-content {
+    display: flex;
+    gap: 20px;
+  }
+  &__list-cover {
+    width: 170px;
+
+    img {
+      width: 100%;
+      border-radius: 16px;
+    }
+  }
+  &__list-main {
+    flex: 1;
+  }
   &__list-header {
     display: flex;
     align-items: baseline;

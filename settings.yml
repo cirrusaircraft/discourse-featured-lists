@@ -52,6 +52,10 @@ featured_lists:
       "classname": {
         "type": "string",
         "description": "Set a CSS class name for custom styles"
+      },
+      "image_url": {
+        "type": "string",
+        "description": "Cover Image URL for the list"
       }
     },
     "additionalProperties": false

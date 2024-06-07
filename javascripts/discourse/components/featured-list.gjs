@@ -29,13 +29,20 @@ export default class FeaturedList extends Component {
             {{on 'click' (if this.currentUser this.createTopic this.showLogin)}}
           >{{i18n (themePrefix 'post_button')}}</DButton>
         </div>
-        <ConditionalLoadingSpinner @condition={{this.isLoading}}>
-          <TopicList
-            @topics={{this.filteredTopics}}
-            @showPosters='true'
-            class='featured-lists__list-body'
-          />
-        </ConditionalLoadingSpinner>
+        <div class='featured-lists__list-content'>
+          <div class='featured-lists__list-cover'>
+            <img src='{{@list.image_url}}' />
+          </div>
+          <div class='featured-lists__list-main'>
+            <ConditionalLoadingSpinner @condition={{this.isLoading}}>
+              <TopicList
+                  @topics={{this.filteredTopics}}
+                  @showPosters='true'
+                  class='featured-lists__list-body'
+              />
+            </ConditionalLoadingSpinner>
+          </div>
+        </div>
       </div>
     {{/if}}
   </template>
